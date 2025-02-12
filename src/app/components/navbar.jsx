@@ -49,7 +49,7 @@ const Navbar = () => {
             </button>
         </div>
       </nav>
-      {mobileMenu?<MobileMenu clicked={mobileMenu} />:null}
+      {mobileMenu?<MobileMenu clicked={mobileMenu} setMobileMenu={setMobileMenu} />:null}
     </>
     
   )

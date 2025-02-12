@@ -4,8 +4,11 @@ import { motion,AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
-const MobileMenu = ({clicked}) => {
+const MobileMenu = ({clicked,setMobileMenu}) => {
     const path = usePathname()
+    const handleLinkClick = () =>{
+        setMobileMenu(false)
+    }
 return (
     <AnimatePresence mode='wait'>
         {clicked && (
@@ -18,10 +21,10 @@ return (
                 <div className='text-xl font-semibold p-10 bg-white'>
                     {/*menu*/}
                     <ul className='md:hidden flex flex-col justify-center items-start  gap-10'>
-                        <li className={`${path=="/"?"text-blue-600":""} hover:text-blue-600`}><Link href='/'>Home</Link></li>
-                        <li className={`${path=="/pages/services_booking"?"text-blue-600":""} hover:text-blue-600`}><Link href='/pages/services_booking'>Services & Booking</Link></li>
-                        <li className={`${path=="/pages/about"?"text-blue-600":""} hover:text-blue-600`}><Link href='/pages/about'>About</Link></li>
-                        <li className={`${path=="/pages/contact"?"text-blue-600":""} hover:text-blue-600`}><Link href='/pages/contact'>Contact Us</Link></li>
+                        <li onClick={handleLinkClick} className={`${path=="/"?"text-blue-600":""} hover:text-blue-600`}><Link href='/'>Home</Link></li>
+                        <li onClick={handleLinkClick} className={`${path=="/pages/services_booking"?"text-blue-600":""} hover:text-blue-600`}><Link href='/pages/services_booking'>Services & Booking</Link></li>
+                        <li onClick={handleLinkClick} className={`${path=="/pages/about"?"text-blue-600":""} hover:text-blue-600`}><Link href='/pages/about'>About</Link></li>
+                        <li onClick={handleLinkClick} className={`${path=="/pages/contact"?"text-blue-600":""} hover:text-blue-600`}><Link href='/pages/contact'>Contact Us</Link></li>
                     </ul>
                 </div>
             </motion.div>
