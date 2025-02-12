@@ -12,16 +12,14 @@ const Navbar = () => {
   const path = usePathname()
   //mobile menu 
   const mobileList = () =>{
-    console.log(mobileMenu);
-        
     setMobileMenu(!mobileMenu)
   }
   return (
     <>
-      <nav className='font-medium bg-white flex justify-between items-center p-5'>
-        
-        {/*logo */} 
-        <h2 className='font-bold text-lg  md:font-black md:text-xl'>LOGO</h2>
+      <nav className='fixed font-medium bg-white w-full shadow-xl'>
+        <div className='flex justify-between items-center p-5'>
+          {/*logo */} 
+        <h2 className='font-bold text-lg  md:font-black md:text-xl'><span className='text-blue-600 text-xl'>KG</span> Taxi</h2>
         
         {/*menu*/}
         <ul className='hidden md:flex justify-center items-center  gap-10'>
@@ -48,6 +46,8 @@ const Navbar = () => {
               <FiMenu/>
             </button>
         </div>
+        </div>
+        
       </nav>
       {mobileMenu?<MobileMenu clicked={mobileMenu} setMobileMenu={setMobileMenu} />:null}
     </>
