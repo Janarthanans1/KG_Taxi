@@ -3,6 +3,8 @@ import React from 'react'
 import Navbar from '@/app/components/navbar'
 import Link from 'next/link'
 import FastBooking from '@/app/components/fastbooking'
+import FeedBack from "@/app/components/feedback"
+import Services from '@/app/components/services'
 
 
 const Home = () => {
@@ -13,18 +15,28 @@ const Home = () => {
         {/* {mobileMenu && <MobileMenu clicked={mobileMenu} setMobileMenu={setMobileMenu}/>} */}
         <Navbar/>
       <header className='bg-gradient-to-r from-blue-200 via-blue-100 to to-white w-full h-fit pb-10'>
-        <div className='pt-28 px-5 flex flex-col gap-12 sm:pt-[110px] sm:flex-row sm:justify-between sm:items-center'>
+        <div className='pt-28 px-5 flex flex-col gap-12 items-center sm:pt-[110px] sm:flex-row sm:justify-between sm:items-center'>
           <div>
-            <p className='text-blue-500 font-bold text-xl sm:font-extrabold sm:text-2xl md:font-black md:text-2xl lg:text-4xl'>Book your ride with<br/><span className='text-black'>KODAI GANESH CALL TAXI</span><br/>for a fast and reliable service!</p>
+            <p className='text-blue-500 font-bold text-xl sm:font-extrabold sm:text-2xl md:font-black md:text-2xl lg:text-4xl'>Book your ride with<br/><span className='text-blue-950'>KODAI GANESH CALL TAXI</span><br/>for a fast and reliable service!</p>
             <button className='bg-blue-500 font-bold text-white py-2 px-4 my-5 rounded-full shadow-lg border-2 border-blue-500 hover:bg-blue-600 hover:shadow-xl '><Link href='/pages/services_booking'>Book Your Ride</Link></button>
           </div>
           <img src="/header.png" alt="header Image" className='w-80 h-80 sm:w-80 sm:h-80 md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px]'/>
         </div>
       </header>
 
-      {/*section 1*/}
+      {/*section 1 services*/}
+      <section className='py-10 px-5'>
+        <Services/>
+      </section>
+
+      {/*section 2 fast booking form*/}
       <section className='h-fit py-10 bg-blue-950'>
         <FastBooking/>
+      </section>
+
+      {/*section 3 feedback form*/}
+      <section>
+        <FeedBack/>
       </section>
     </>
     
