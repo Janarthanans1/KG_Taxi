@@ -3,7 +3,7 @@ import React from 'react'
 import Navbar from '@/app/components/navbar'
 import Link from 'next/link'
 import FastBooking from '@/app/components/fastbooking'
-import FeedBack from "@/app/components/feedback"
+import WhyChooseUs from '@/app/components/whychooseus'
 import Services from '@/app/components/services'
 
 
@@ -25,18 +25,18 @@ const Home = () => {
       </header>
 
       {/*section 1 services*/}
-      <section className='py-10 px-5'>
+      <section className='py-10 px-5 bg-gray-100'>
         <Services/>
       </section>
 
       {/*section 2 fast booking form*/}
-      <section className='h-fit py-10 bg-blue-950'>
+      <section className='h-fit py-10 bg-blue-500'>
         <FastBooking/>
       </section>
 
       {/*section 3 feedback form*/}
-      <section>
-        <FeedBack/>
+      <section className='h-fit py-10 px-5 bg-gray-100'>
+        <WhyChooseUs/>
       </section>
     </>
     

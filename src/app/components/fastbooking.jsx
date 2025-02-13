@@ -12,7 +12,7 @@ const FastBooking = () => {
                 <div className='flex flex-col gap-5 w-[300px] sm:w-[350px] md:w-[300px] lg:w-[450px]'>
                     <input type="text" className='w-full py-2 px-2 rounded-lg' placeholder='Enter your pickup location' />
                     <input type="text" className='w-full py-2 px-2 rounded-lg' placeholder='Mobile number' />
-                    <button className='font-bold bg-white py-2 px-2 shadow-sm rounded-lg'>Book Now</button>
+                    <button className='font-bold bg-white text-blue-950 py-2 px-2 shadow-sm rounded-lg'>Book Now</button>
                 </div>
             </form>
         </div>
