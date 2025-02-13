@@ -1,14 +1,18 @@
+"use client"
 import React from 'react'
 import Navbar from '@/app/components/navbar'
 import Link from 'next/link'
 import FastBooking from '@/app/components/fastbooking'
 
+
 const Home = () => {
+  // const [mobileMenu,setMobileMenu] = useState(false)
   return (
     <>
       {/*header*/}
-      <header className='bg-gradient-to-r from-blue-200 via-blue-100 to to-white w-full h-screen pb-10'>
+        {/* {mobileMenu && <MobileMenu clicked={mobileMenu} setMobileMenu={setMobileMenu}/>} */}
         <Navbar/>
+      <header className='bg-gradient-to-r from-blue-200 via-blue-100 to to-white w-full h-screen pb-10'>
         <div className='pt-28 px-5 flex flex-col sm:pt-[110px] sm:flex-row sm:justify-between sm:items-center'>
           <div>
             <p className='text-blue-500 font-bold text-xl sm:font-extrabold sm:text-2xl md:font-black md:text-2xl lg:text-4xl'>Book your ride with<br/><span className='text-black'>KODAI GANESH CALL TAXI</span><br/>for a fast and reliable service!</p>
@@ -19,7 +23,7 @@ const Home = () => {
       </header>
 
       {/*section 1*/}
-      <section className='h-fit px-20 py-10 bg-blue-950'>
+      <section className='h-fit py-10 bg-blue-950'>
         <FastBooking/>
       </section>
     </>
