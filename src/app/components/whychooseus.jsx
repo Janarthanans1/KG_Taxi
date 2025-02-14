@@ -9,7 +9,7 @@ const WhyChooseUs=()=> {
   ];
 
   return (
-    <section className="bg-gray-100 py-16">
+    <section className="bg-gray-100">
       <div className="text-center">
         <h2 className="text-3xl font-bold">Why Choose Us?</h2>
         <p className="text-gray-600 mt-2">We ensure safe, reliable, and affordable rides.</p>
