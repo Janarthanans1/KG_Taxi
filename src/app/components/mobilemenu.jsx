@@ -23,7 +23,7 @@ return (
                     {/*menu*/}
                     <ul className='md:hidden flex flex-col justify-center items-start  gap-10'>
                         <li onClick={handleLinkClick} className={`${path=="/"?"text-blue-600":""} hover:text-blue-600`}><Link href='/'>Home</Link></li>
-                        <li onClick={handleLinkClick} className={`${path=="/pages/services_booking"?"text-blue-600":""} hover:text-blue-600`}><Link href='/pages/services_booking'>Services & Booking</Link></li>
+                        <li onClick={handleLinkClick} className={`${path=="/pages/booking"?"text-blue-600":""} hover:text-blue-600`}><Link href='/pages/booking'>Book a Ride</Link></li>
                         <li onClick={handleLinkClick} className={`${path=="/pages/about"?"text-blue-600":""} hover:text-blue-600`}><Link href='/pages/about'>About</Link></li>
                         <li onClick={handleLinkClick} className={`${path=="/pages/contact"?"text-blue-600":""} hover:text-blue-600`}><Link href='/pages/contact'>Contact Us</Link></li>
                     </ul>
