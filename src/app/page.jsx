@@ -19,7 +19,7 @@ const Home = () => {
         <div className='pt-28 px-10 md:px-20 flex flex-col gap-12 items-center sm:pt-[110px] sm:flex-row sm:justify-between sm:items-center'>
           <div>
             <p className='text-blue-500 font-bold text-xl sm:font-extrabold sm:text-2xl md:font-black md:text-2xl lg:text-4xl'>Book your ride with<br/><span className='text-blue-950'>KODAI GANESH CALL TAXI</span><br/>for a fast and reliable service!</p>
-            <button className='bg-blue-500 font-bold text-white py-2 px-4 my-5 rounded-full shadow-lg border-2 border-blue-500 hover:bg-blue-600 hover:shadow-xl '><Link href='/pages/services_booking'>Book Your Ride</Link></button>
+            <button className='bg-blue-500 font-bold text-white py-2 px-4 my-5 rounded-full shadow-lg border-2 border-blue-500 hover:bg-blue-600 hover:shadow-xl '><Link href='/pages/booking'>Book Your Ride</Link></button>
           </div>
           <img src="/header.png" alt="header Image" className='w-80 h-80 sm:w-80 sm:h-80 md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px]'/>
         </div>

@@ -22,9 +22,9 @@ const Navbar = () => {
         <h2 className='font-bold text-lg  md:font-black md:text-xl'><span className='text-blue-600 text-xl'>KG</span> Taxi</h2>
         
         {/*menu*/}
-        <ul className='hidden md:flex justify-center items-center  gap-10'>
+        <ul className='hidden md:flex justify-center items-center uppercase gap-10'>
             <li className={`${path=="/"?"text-blue-600":""} hover:text-blue-600`}><Link href='/'>Home</Link></li>
-            <li className={`${path=="/pages/services_booking"?"text-blue-600":""} hover:text-blue-600`}><Link href='/pages/services_booking'>Services & Booking</Link></li>
+            <li className={`${path=="/pages/booking"?"text-blue-600":""} hover:text-blue-600`}><Link href='/pages/booking'>Book a Ride</Link></li>
             <li className={`${path=="/pages/about"?"text-blue-600":""} hover:text-blue-600`}><Link href='/pages/about'>About</Link></li>
             <li className={`${path=="/pages/contact"?"text-blue-600":""} hover:text-blue-600`}><Link href='/pages/contact'>Contact Us</Link></li>
         </ul>
