@@ -23,10 +23,10 @@ const BookingForm = () => {
             <input type="text" placeholder="Drop off address" className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" />
 
             {/* Date Field */}
-            <input type="date" className="w-full p-4 rounded-full text-gray-600 focus:outline-none" placeholder='Date' />
+            <input type="date" className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" defaultValue={new Date().toISOString().split("T")[0]}/>
 
-            {/* Time Field */}
-            <input type="time" className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" />
+            <input type="time" className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" defaultValue={new Date().toISOString().split("T")[1].substring(0,5)} />
+
           </div>
 
           {/* Car Type */}
