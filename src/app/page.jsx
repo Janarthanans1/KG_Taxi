@@ -41,7 +41,7 @@ const Home = () => {
       </section>
 
       {/*Footer*/}
-      <footer className='h-fit py-10 px-10 lg:px-20 text-white bg-blue-950'>
+      <footer className='h-fit '>
         <Footer/>
       </footer>
     </>

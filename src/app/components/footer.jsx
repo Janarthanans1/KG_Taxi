@@ -6,7 +6,7 @@ import { IoMdMail,IoMdCall } from 'react-icons/io'
 
 const Footer = () => {
   return (
-    <>
+    <div className='text-white bg-blue-950 py-10 px-10 lg:px-20 '>
       <div className='flex flex-col my-10 md:flex-row md:justify-between md:gap-10 '>
         {/*logo and company name*/}
         <div className='min-w-64 mb-10'>
@@ -47,7 +47,7 @@ const Footer = () => {
           <p><Link href=''>Privacy Policy</Link></p>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

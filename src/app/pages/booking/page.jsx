@@ -1,15 +1,19 @@
 import React from 'react'
 import BookingForm from '../../components/bookingform'
-import DateTimeInput from '../../components/date'
+import Footer from '../../components/footer'
+
 
 const BookARide = () => {
   return (
-    <div className='bg-gray-200 pt-28 px-10 lg:px-20 h-full'>
-      <div>
+    <>
+      <div className='bg-gray-200 h-fit pt-40'>
          <BookingForm/>
-         <DateTimeInput/>
+      
+      <footer className='bg-blue-950 text-white'>
+        <Footer/>
+      </footer>
       </div>
-    </div>
+    </>
   )
 }
 
