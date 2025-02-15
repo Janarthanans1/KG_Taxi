@@ -23,7 +23,7 @@ const BookingForm = () => {
             <input type="text" placeholder="Drop off address" className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" />
 
             {/* Date Field */}
-            <input type="date" className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" />
+            <input type="date" className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" placeholder='Date' />
 
             {/* Time Field */}
             <input type="time" className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" />
