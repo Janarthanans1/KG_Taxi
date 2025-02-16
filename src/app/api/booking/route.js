@@ -9,7 +9,7 @@ export async function POST(req) {
             url:'https://graph.facebook.com/v21.0/499115399961390/messages',
             method:'post',
             headers: {
-                'Authorization': `Bearer ${process.env.WHATSAPP_TOKEN}`,
+                'Authorization': `Bearer ${process.env.WHATSAPP_TOKEN || EAAQy9VUiBJ0BO65nzZAs2ZCuniWc1kciykw09tnMZBLrZCZAVwEPijgPuWsA6NzSaVCxsxuUAS7IzZBjAPUFZCTHpdBFkUvPDkTlHwRqxd053F7KmOFLmGEUfgjjkoE5anirwzK7ZB1ZCTPw2OKYK63WX5dmbi4nlVfc6gSzKH02S9wPEliWlyXdnjFndPtMf68cVFakZCXOPbTlILnZB3k7V6BvUjz1VXQcMoREHQZD}`,
                 'Content-Type': 'application/json'
             },
             data:JSON.stringify({
