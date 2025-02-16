@@ -6,6 +6,7 @@ import FastBooking from '@/app/components/fastbooking'
 import WhyChooseUs from '@/app/components/whychooseus'
 import Services from '@/app/components/services'
 import Footer from '@/app/components/footer'
+import Example from '@/app/components/example'
 
 
 const Home = () => {
@@ -43,6 +44,7 @@ const Home = () => {
       {/*Footer*/}
       <footer className='h-fit '>
         <Footer/>
+        <Example/>
       </footer>
     </>
     
