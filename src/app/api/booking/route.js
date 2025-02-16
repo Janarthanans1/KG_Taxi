@@ -18,7 +18,7 @@ export async function POST(req) {
                 timeout: 50000,
                 type: 'text',
                 text: {
-                    body: `New booking,\nName: ${name}\nEmail : ${email}\nPhone : ${phone}\nPassengers : ${passengers}\nPickup : ${pickup}\nDropoff : ${dropoff}\nDate : ${date}\nTime : ${time}\nCar Type : ${carType}`
+                    body: `New booking,\nName: ${name}\n`
                 }
             })
         });
