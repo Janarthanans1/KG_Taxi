@@ -10,7 +10,7 @@ const Taxiform = () => {
   const [passengers, setPassengers] = useState('');
   const [pickup, setPickup] = useState('');
   const [destination, setDropoff] = useState('');
-  const [date, setDate] = useState('dd/mm/yyyy');
+  const [date, setDate] = useState('dd/mm/yyyyy');
   const [time, setTime] = useState('--:--');
   const [carType, setCarType] = useState('4 Seater');
 
