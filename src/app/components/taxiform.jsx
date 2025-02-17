@@ -53,7 +53,7 @@ const Taxiform = () => {
             <input type="date" onChange={e => setDate(e.target.value)} value={date} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none overflow-visible" />
             <input type="time" onChange={e => setTime(e.target.value)} value={time} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none overflow-visible" />
             {/*component date*/}
-            <DatePicker selected={date} onChange={(date)=>setDate(date)} minDate={new Date()} className='w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none '/>
+            <DatePicker selected={date} onChange={(date)=>setDate(date)} dateFormat="dd/mm/yyyy" placeholderText='dd/mm/yyyy' minDate={new Date()} className='w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none '/>
           
           </div>
 
