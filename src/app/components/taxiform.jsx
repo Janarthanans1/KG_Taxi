@@ -2,6 +2,9 @@
 import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
+import DatePicker from 'react-datepicker'
+import "react-datepicker/dist/react-datepicker.css";
+
 
 const Taxiform = () => {
   const [name, setName] = useState('');
@@ -10,8 +13,8 @@ const Taxiform = () => {
   const [passengers, setPassengers] = useState('');
   const [pickup, setPickup] = useState('');
   const [destination, setDropoff] = useState('');
-  const [date, setDate] = useState('dd/mm/yyyyy');
-  const [time, setTime] = useState('--:--');
+  const [date, setDate] = useState('');
+  const [time, setTime] = useState('');
   const [carType, setCarType] = useState('4 Seater');
 
   const bookingData = async (e) => {
@@ -47,8 +50,11 @@ const Taxiform = () => {
             <input type="text" placeholder="Drop off address" onChange={e => setDropoff(e.target.value)} value={destination} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" />
 
             {/* Date and Time Fields */}
-            <input type="date" onChange={e => setDate(e.target.value)} value={date} className="w-full bg-gray-500 p-4 rounded-full text-gray-600 focus:outline-none overflow-visible" />
+            <input type="date" onChange={e => setDate(e.target.value)} value={date} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none overflow-visible" />
             <input type="time" onChange={e => setTime(e.target.value)} value={time} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none overflow-visible" />
+            {/*component date*/}
+            <DatePicker selected={date} onChange={(date)=>setDate(date)} minDate={new Date()} className='w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none '/>
+          
           </div>
 
           {/* Car Type Selection */}
