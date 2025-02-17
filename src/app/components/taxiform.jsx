@@ -3,8 +3,10 @@ import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import DatePicker from 'react-datepicker'
+import TimePicker from 'react-time-picker'
 import "react-datepicker/dist/react-datepicker.css";
-
+import 'react-time-picker/dist/TimePicker.css';
+import 'react-clock/dist/Clock.css';
 
 const Taxiform = () => {
   const [name, setName] = useState('');
@@ -21,17 +23,20 @@ const Taxiform = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('/api/telegram_msg', {
-        name:name,
-        email:email,
-        phone:phone,
-        passengers:passengers,
-        pickup:pickup,
-        destination:destination,
-        date:date,
-        time:time,
-        carType:carType 
-      });
+      console.log(date)
+      console.log(time);
+      
+      // const response = await axios.post('/api/telegram_msg', {
+      //   name:name,
+      //   email:email,
+      //   phone:phone,
+      //   passengers:passengers,
+      //   pickup:pickup,
+      //   destination:destination,
+      //   date:date,
+      //   time:time,
+      //   carType:carType 
+      // });
 
       
     } catch (error) {
@@ -48,13 +53,10 @@ const Taxiform = () => {
             <input type="number" placeholder="Number of Passengers" onChange={e => setPassengers(e.target.value)} value={passengers} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" />
             <input type="text" placeholder="Pick up address" onChange={e => setPickup(e.target.value)} value={pickup} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" />
             <input type="text" placeholder="Drop off address" onChange={e => setDropoff(e.target.value)} value={destination} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" />
-
-            {/* Date and Time Fields */}
-            <input type="date" onChange={e => setDate(e.target.value)} value={date} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none overflow-visible" />
-            <input type="time" onChange={e => setTime(e.target.value)} value={time} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none overflow-visible" />
             {/*component date*/}
-            <DatePicker selected={date} onChange={(date)=>setDate(date)} dateFormat="dd/MM/yyyy" placeholderText='dd/mm/yyyy' minDate={new Date()} className='w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none '/>
-          
+            <DatePicker selected={date} onChange={(date)=>setDate(date)} dateFormat="dd/MM/yyyy" placeholderText='Date' minDate={new Date()} className='z-10 w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none '/>
+            {/*Time Component*/}
+            <TimePicker onChange={setTime} value={time} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none"/>
           </div>
 
           {/* Car Type Selection */}
