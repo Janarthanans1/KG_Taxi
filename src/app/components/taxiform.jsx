@@ -9,7 +9,7 @@ const Taxiform = () => {
   const [phone, setPhone] = useState('');
   const [passengers, setPassengers] = useState('');
   const [pickup, setPickup] = useState('');
-  const [dropoff, setDropoff] = useState('');
+  const [destination, setDropoff] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [carType, setCarType] = useState('4 Seater');
@@ -18,19 +18,19 @@ const Taxiform = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('/api/booking', {
-        name,
-        email,
-        phone,
-        passengers,
-        pickup,
-        dropoff,
-        date,
-        time,
-        carType 
+      const response = await axios.post('/api/telegram_msg', {
+        name:name,
+        email:email,
+        phone:phone,
+        passengers:passengers,
+        pickup:pickup,
+        destination:destination,
+        date:date,
+        time:time,
+        carType:carType 
       });
 
-      console.log(response.data.message.name);
+      
     } catch (error) {
       console.error("Error booking ride:", error);
       
@@ -44,7 +44,7 @@ const Taxiform = () => {
             <input type="tel" placeholder="Phone" onChange={e => setPhone(e.target.value)} value={phone} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" />
             <input type="number" placeholder="Number of Passengers" onChange={e => setPassengers(e.target.value)} value={passengers} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" />
             <input type="text" placeholder="Pick up address" onChange={e => setPickup(e.target.value)} value={pickup} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" />
-            <input type="text" placeholder="Drop off address" onChange={e => setDropoff(e.target.value)} value={dropoff} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" />
+            <input type="text" placeholder="Drop off address" onChange={e => setDropoff(e.target.value)} value={destination} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" />
 
             {/* Date and Time Fields */}
             <input type="date" onChange={e => setDate(e.target.value)} value={date} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" />
