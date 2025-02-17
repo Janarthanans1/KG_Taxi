@@ -47,7 +47,7 @@ const Taxiform = () => {
             <input type="text" placeholder="Drop off address" onChange={e => setDropoff(e.target.value)} value={destination} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none" />
 
             {/* Date and Time Fields */}
-            <input type="date" onChange={e => setDate(e.target.value)} value={date} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none overflow-visible" />
+            <input type="date" onChange={e => setDate(e.target.value)} value={date} className="w-full bg-gray-500 p-4 rounded-full text-gray-600 focus:outline-none overflow-visible" />
             <input type="time" onChange={e => setTime(e.target.value)} value={time} className="w-full bg-gray-100 p-4 rounded-full text-gray-600 focus:outline-none overflow-visible" />
           </div>
 
