@@ -4,7 +4,6 @@ import { useState } from 'react'
 import axios from 'axios'
 
 const Taxiform = () => {
-     // State variables for inputs
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -13,8 +12,8 @@ const Taxiform = () => {
   const [dropoff, setDropoff] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
-  const [carType, setCarType] = useState('4 Seater'); // Default selection
-  // Handle form submission
+  const [carType, setCarType] = useState('4 Seater');
+
   const bookingData = async (e) => {
     e.preventDefault();
 
@@ -28,7 +27,7 @@ const Taxiform = () => {
         dropoff,
         date,
         time,
-        carType // Send selected car type
+        carType 
       });
 
       console.log(response.data.message.name);
